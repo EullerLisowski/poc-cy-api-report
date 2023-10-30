@@ -1,0 +1,24 @@
+{
+  "name": "poc-cy-api-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EullerLisowski/poc-cy-api-report.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EullerLisowski/poc-cy-api-report/issues"
+  },
+  "homepage": "https://github.com/EullerLisowski/poc-cy-api-report#readme",
+  "dependencies": {
+    "cypress": "^13.4.0",
+    "cypress-mochawesome-reporter": "^3.6.1"
+  }
+}
