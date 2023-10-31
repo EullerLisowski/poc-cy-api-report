@@ -1,5 +1,5 @@
 Cypress.Commands.add('login', (email, password) => {
-    cy.request({
+    cy.api({
         method: 'POST',
         url: '/login',
         body: {
@@ -12,7 +12,7 @@ Cypress.Commands.add('login', (email, password) => {
 })
 
 Cypress.Commands.add('postProdutos', (produtoBody = { nome, preco, descricao, quantidade }) => {
-    cy.request({
+    cy.api({
         method: 'POST',
         url: '/produtos',
         body: produtoBody,
@@ -21,7 +21,7 @@ Cypress.Commands.add('postProdutos', (produtoBody = { nome, preco, descricao, qu
 })
 
 Cypress.Commands.add('deleteProdutos', (id) => {
-    cy.request({
+    cy.api({
         method: 'DELETE',
         url: `/produtos/${id}`,
         headers: { authorization: Cypress.env('token') }
@@ -29,7 +29,7 @@ Cypress.Commands.add('deleteProdutos', (id) => {
 })
 
 Cypress.Commands.add('getProdutos', (qs) => {
-    cy.request({
+    cy.api({
         method: 'GET',
         url: '/produtos',
         ... (qs && { qs }),
@@ -38,7 +38,7 @@ Cypress.Commands.add('getProdutos', (qs) => {
 })
 
 Cypress.Commands.add('getProduto', (id) => {
-    cy.request({
+    cy.api({
         method: 'GET',
         url: `/produtos/${id}`,
         headers: { authorization: Cypress.env('token') }
@@ -46,7 +46,7 @@ Cypress.Commands.add('getProduto', (id) => {
 })
 
 Cypress.Commands.add('putProdutos', (id, produtoBody = { nome, preco, descricao, quantidade }) => {
-    cy.request({
+    cy.api({
         method: 'PUT',
         url: `/produtos/${id}`,
         body: produtoBody,
