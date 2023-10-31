@@ -1,3 +1,4 @@
+const cypress = require("cypress");
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
@@ -7,19 +8,19 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3000',
     video: false,
-    screenshotOnRunFailure: false,
+    screenshotsFolder: 'cypress/reports/assets',
     defaultCommandTimeout: 250000,
     requestTimeout: 250000,
     responseTimeout: 250000,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
-      inlineAssets: true,
       charts: true,
       consoleReporter: 'spec',
       reportFilename: "index",
       overwrite: true,
       html: false,
-      json: true
+      json: true,
+      embeddedScreenshots: true
     }
   }
 })
