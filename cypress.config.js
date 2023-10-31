@@ -4,6 +4,9 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
+       require('cypress-terminal-report/src/installLogsPrinter')(on, {
+        printLogsToConsole: 'always'
+      });
     },
     baseUrl: 'http://localhost:3000',
     video: false,
