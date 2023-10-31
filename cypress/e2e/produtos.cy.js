@@ -74,5 +74,9 @@ describe('Validações de Produtos', () => {
                 })
             })
         })
+
+        afterEach(() => {
+            cy.screenshot()
+        })
     })
 })
