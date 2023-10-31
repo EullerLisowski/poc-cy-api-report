@@ -1,6 +1,6 @@
 describe('Validações de Produtos', () => {
 
-    Array.from(Array(1).keys()).forEach(() => {
+    Array.from(Array(100).keys()).forEach(() => {
         before(() => {
             cy.fixture('usuario').then((user) => {
                 cy.login(user.email, user.password)
